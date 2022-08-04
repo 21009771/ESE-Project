@@ -16,8 +16,11 @@ public class RegisterTuition extends RegisterTimetable {
 		this.registerId = registerId;
 	}
 	public String toString(){
-		String output = "";
+		//String output = "";
 		// Write your codes here
+		String output = super.toString();
+		output = String.format("%-63s %-20s", output, registerId);
+		
 		return output;
 	}
 	
