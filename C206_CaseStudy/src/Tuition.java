@@ -1,5 +1,5 @@
 
-public class Tuition extends Timetable {
+public class Tuition extends RegisterTimetable {
 	private int registerId;
 
 	public Tuition(String registerNum, String tuitionTimetableId, String email, String dateTime) {
