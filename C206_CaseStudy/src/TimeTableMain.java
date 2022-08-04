@@ -7,6 +7,7 @@ public class TimeTableMain {
 		
 		ArrayList<TimeTable> timetable = new ArrayList<TimeTable>();
 		
+		
 		int option = 0;
 
 		while (option != 5) {
