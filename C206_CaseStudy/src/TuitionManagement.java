@@ -11,7 +11,7 @@ public class TuitionManagement {
 //		private static final int OPTION_QUIT = 5;
 		
 		// Ardilla tuition timetable
-			ArrayList<Tuition> tuitionList = new ArrayList<Tuition>();
+			ArrayList<RegisterTuition> tuitionList = new ArrayList<RegisterTuition>();
 		
 			int option = 0;
 
@@ -36,7 +36,7 @@ public class TuitionManagement {
 					int itemType = Helper.readInt("Enter option to select item type > ");
 
 					if (itemType == 1) {
-						Tuition tt = inputTuition();
+						RegisterTuition tt = inputTuition();
 						TuitionManagement.addTuition(tuitionList, tt);
 						System.out.println("Tuition timetable added");
 
@@ -64,7 +64,7 @@ public class TuitionManagement {
 
 		}
 		//Ardilla================================= Option 2 Add an item (CRUD - Create) =================================
-		private static Tuition inputTuition() {
+		private static RegisterTuition inputTuition() {
 			String registerNum = Helper.readString("Enter register number > ");
 			String tuitionTimetableId = Helper.readString("Enter tuition timetable Id > ");
 			String email = Helper.readString("Enter email > ");
@@ -72,24 +72,24 @@ public class TuitionManagement {
 			
 			String registerId = Helper.readString("Enter register Id > ");
 
-			Tuition tt = new Tuition(registerNum, tuitionTimetableId, email, registerId);
+			RegisterTuition tt = new RegisterTuition(registerNum, tuitionTimetableId, email, registerId);
 			return tt;
 		
 		}
 
-		private static void addTuition(ArrayList<Tuition> tuitionList, Tuition tt) {
+		private static void addTuition(ArrayList<RegisterTuition> tuitionList, RegisterTuition tt) {
 			
 			tuitionList.add(tt);
 		}
 
 
-		private static void viewAllTuition(ArrayList<Tuition> tuitionList) {
+		private static void viewAllTuition(ArrayList<RegisterTuition> tuitionList) {
 			// TODO Auto-generated method stub
 			
 		}
 
 		public static void menu() {
-			TuitionManagement.setHeader("RESOURCE CENTRE APP");
+			TuitionManagement.setHeader("TUITION MANAGEMENT APP");
 			System.out.println("1. Display Inventory");
 			System.out.println("2. Register tuition timetable ");
 			System.out.println("3. ");
