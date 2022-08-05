@@ -4,14 +4,14 @@ public class RegisterTimetable {
 	private String tuitionTimetableId;
 	private String email;
 	private String status;
-	private boolean dateTime;
+	private String dateTime;
 	
 	public RegisterTimetable(String registerNum, String tuitionTimetableId, String email, String dateTime) {
 		this.registerNum = registerNum;
 		this.tuitionTimetableId = tuitionTimetableId;
 		this.email = email;
 		this.status = "pending";
-		this.dateTime = true;
+		this.dateTime = dateTime;
 		
 	}
 
@@ -47,11 +47,15 @@ public class RegisterTimetable {
 		this.status = status;
 	}
 
-	public boolean isDateTime() {
+	public String isDateTime() {
+		return dateTime;
+	}
+	
+	public String getDateTime() {
 		return dateTime;
 	}
 
-	public void setDateTime(boolean dateTime) {
+	public void setDateTime(String dateTime) {
 		this.dateTime = dateTime;
 	}
 
