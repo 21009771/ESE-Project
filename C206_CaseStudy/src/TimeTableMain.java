@@ -38,9 +38,8 @@ public class TimeTableMain {
 				TimeTableMain.setHeader("Delete");			
 				TimeTableMain.setHeader("TimeTable");
 				
-				
-				TimeTable tt = inputTimeTableDelete();
-				TimeTableMain.deleteTimeTable(timetable, tt);
+				int ID = Helper.readInt("Enter the ID >");
+				TimeTableMain.deleteTimeTable(timetable,ID);
 				System.out.println("Tuition timetable deleted");
 				
 				
@@ -109,21 +108,22 @@ public class TimeTableMain {
 		timetable.add(tt);
 		System.out.println("TimeTable added");
 		
-	}
-	
-	public static TimeTable inputTimeTableDelete() {	
-		int ID = Helper.readInt("Enter TimeTable ID > ");
-
-		TimeTable tt= new TimeTable(ID);
-		return tt;
-		
 	}	
 	
-	public static void deleteTimeTable(ArrayList<TimeTable> timetable, TimeTable tt) {
-
-		timetable.remove(tt);
-		System.out.println("TimeTable deleted");
+	public static boolean deleteTimeTable(ArrayList<TimeTable> timetable, int ID) {
 		
+		boolean isDeleted = false;
+		
+		
+		for(int i = 0; i < timetable.size(); i++ ) {
+			if(ID == timetable.get(i).getTimeTableID()) {
+				timetable.remove(i);
+				isDeleted = true;
+			}
+			
+		}
+		
+	  return isDeleted;
 	}
 	
 }
