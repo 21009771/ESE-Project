@@ -121,6 +121,8 @@ public class TimeTableMain {
 				isDeleted = true;
 			}
 			
+			else if(ID != timetable.get(i).getTimeTableID())
+			System.out.println("Invaid ID");
 		}
 		
 	  return isDeleted;
