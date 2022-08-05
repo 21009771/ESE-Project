@@ -8,7 +8,7 @@ public class TimeTable {
 	
 
 	
-	public TimeTable(int timeTableID, double price, String starttime, String endtime, String mode) {
+	public TimeTable(int TimeTableID, double price, String starttime, String endtime, String mode) {
 		
 		this.TimeTableID = TimeTableID;
 		this.price = price;
