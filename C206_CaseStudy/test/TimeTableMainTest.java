@@ -61,13 +61,12 @@ public class TimeTableMainTest {
 		//Test that Item list is not null but empty -boundary
 		assertNotNull("Test if there is valid TimeTable arraylist to retrieve item", timetable);
 		
-		//Add the element 
-		
 		
 		//Test that the element is removed from the list 
-		
-	    
-        assertEquals("Check that the element is removed from list", 1, timetable.size());  
+		TimeTableMain.deleteTimeTable(timetable, tt1);
+		String allTimeTable = TimeTableMain.retrieveTimeTable(timetable);
+		String testOutput = "";
+		assertEquals("Check that ViewTimeTable", testOutput, allTimeTable);
     }  
 	
 	
