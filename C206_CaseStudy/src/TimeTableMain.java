@@ -114,8 +114,7 @@ public class TimeTableMain {
 	public static TimeTable inputTimeTableDelete() {	
 		int ID = Helper.readInt("Enter TimeTable ID > ");
 
-
-		TimeTable tt= new TimeTable(ID, 0, null, null, null);
+		TimeTable tt= new TimeTable(ID);
 		return tt;
 		
 	}	
@@ -127,5 +126,4 @@ public class TimeTableMain {
 		
 	}
 	
-
 }

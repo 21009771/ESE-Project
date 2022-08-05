@@ -16,6 +16,10 @@ public class TimeTable {
 		this.endtime = endtime;
 		this.mode = mode;
 	}
+	
+	public TimeTable(int TimeTableID) {
+		this.TimeTableID = TimeTableID;
+	}
 
 	public int getTimeTableID() {
 		return TimeTableID;
