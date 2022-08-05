@@ -127,5 +127,10 @@ public class TimeTableMain {
 		
 	  return isDeleted;
 	}
+
+	public static void deleteTimeTable(ArrayList<TimeTable> timetable) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 }

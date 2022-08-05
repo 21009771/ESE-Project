@@ -63,7 +63,7 @@ public class TimeTableMainTest {
 		
 		
 		//Test that the element is removed from the list 
-		TimeTableMain.deleteTimeTable(timetable, tt1);
+		TimeTableMain.deleteTimeTable(timetable);
 		String allTimeTable = TimeTableMain.retrieveTimeTable(timetable);
 		String testOutput = "";
 		assertEquals("Check that ViewTimeTable", testOutput, allTimeTable);
