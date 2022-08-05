@@ -1,0 +1,18 @@
+/*
+ * I declare that this code was written by me. 
+ * I do not copy or allow others to copy my code. 
+ * I understand that copying code is considered as plagiarism.
+ * 
+ * Student Name: Chua Shen Ru
+ * Student ID: 21034608
+ * Class: W64P
+ * Date/Time created: Friday 05-08-2022 21:32
+ */
+
+/**
+ * @author chuas
+ *
+ */
+public class OptionMenu {
+
+}
