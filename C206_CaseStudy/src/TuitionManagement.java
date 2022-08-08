@@ -12,6 +12,8 @@ public class TuitionManagement {
 		
 		// Ardilla tuition timetable
 			ArrayList<RegisterTuition> tuitionList = new ArrayList<RegisterTuition>();
+			
+			ArrayList<TimeTable> timetable = new ArrayList<TimeTable>();
 		
 			int option = 0;
 
@@ -27,7 +29,7 @@ public class TuitionManagement {
 				
 
 				} else if (option == 2) {
-					// Add a new tuitiontimetable
+					// Add a new timetable
 					TuitionManagement.setHeader("ADD");			
 					TuitionManagement.setHeader("TUITION");
 					System.out.println("1. Tuition Timetable");
@@ -87,12 +89,16 @@ public class TuitionManagement {
 			// TODO Auto-generated method stub
 			
 		}
+		
+		//Jane================================= Option 3 Add an timetable (CRUD - Create) =================================
+		
+		
 
 		public static void menu() {
 			TuitionManagement.setHeader("TUITION MANAGEMENT APP");
 			System.out.println("1. Display Inventory");
 			System.out.println("2. Register tuition timetable ");
-			System.out.println("3. ");
+			System.out.println("3. Display Timetable");
 			System.out.println("4. ");
 			System.out.println("5. Quit");
 			Helper.line(80, "-");

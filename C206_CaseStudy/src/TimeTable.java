@@ -8,13 +8,17 @@ public class TimeTable {
 	
 
 	
-	public TimeTable(int timeTableID, double price, String starttime, String endtime, String mode) {
+	public TimeTable(int TimeTableID, double price, String starttime, String endtime, String mode) {
 		
 		this.TimeTableID = TimeTableID;
 		this.price = price;
 		this.starttime = starttime;
 		this.endtime = endtime;
 		this.mode = mode;
+	}
+	
+	public TimeTable(int TimeTableID) {
+		this.TimeTableID = TimeTableID;
 	}
 
 	public int getTimeTableID() {
