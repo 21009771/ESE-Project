@@ -1,4 +1,4 @@
-
+//Ardilla
 public class RegisterTimetable {
 	private String registerNum;
 	private String tuitionTimetableId;

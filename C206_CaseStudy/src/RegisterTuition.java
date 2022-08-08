@@ -1,4 +1,4 @@
-
+//Ardilla
 public class RegisterTuition extends RegisterTimetable {
 	private int registerId;
 
