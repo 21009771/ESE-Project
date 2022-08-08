@@ -40,7 +40,7 @@ public class TimeTableMain {
 				
 				int ID = Helper.readInt("Enter the ID >");
 				TimeTableMain.deleteTimeTable(timetable,ID);
-				System.out.println("Tuition timetable deleted");
+
 				
 				
 
@@ -114,22 +114,21 @@ public class TimeTableMain {
 		
 		boolean isDeleted = false;
 		
-		
 		for(int i = 0; i < timetable.size(); i++ ) {
 			if(ID == timetable.get(i).getTimeTableID()) {
 				timetable.remove(i);
 				isDeleted = true;
 			}
 			
-			else if(ID != timetable.get(i).getTimeTableID())
-			System.out.println("Invaid ID");
-		}
-		
+			else {
+				System.out.println("Invailid ID");
+			}
+			
+	   }
 	  return isDeleted;
 	}
 
 	public static void deleteTimeTable(ArrayList<TimeTable> timetable) {
-		// TODO Auto-generated method stub
 		
 	}
 	
