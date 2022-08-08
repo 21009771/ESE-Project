@@ -7,7 +7,7 @@ public class RegisterTuition extends RegisterTimetable {
 		this.registerId = registerId; 
 	}
 
-
+	
 	public int getRegisterId() {
 		return registerId;
 	}

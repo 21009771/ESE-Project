@@ -1,4 +1,4 @@
-//Ardilla
+
 public class RegisterTimetable {
 	private String registerNum;
 	private String tuitionTimetableId;
@@ -6,6 +6,7 @@ public class RegisterTimetable {
 	private String status;
 	private String dateTime;
 	
+	//Ardilla
 	public RegisterTimetable(String registerNum, String tuitionTimetableId, String email, String dateTime) {
 		this.registerNum = registerNum;
 		this.tuitionTimetableId = tuitionTimetableId;
