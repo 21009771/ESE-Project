@@ -1,11 +1,11 @@
 import java.util.ArrayList;
-
+//Ardilla
 public class RegisterTuitionTimetable {
 	
 	public static void main(String[] args) {
 		
 	ArrayList<RegisterTuition> tuitionList = new ArrayList<RegisterTuition>();
-//Ardilla
+
 	
 	int option = 0;
 
