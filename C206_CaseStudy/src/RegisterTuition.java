@@ -19,7 +19,7 @@ public class RegisterTuition extends RegisterTimetable {
 		//String output = "";
 		// Write your codes here
 		String output = super.toString();
-		output = String.format("%-63s %-20s", output, registerId);
+		output = String.format("%-50s %-10s", output, registerId);
 		
 		return output;
 	}

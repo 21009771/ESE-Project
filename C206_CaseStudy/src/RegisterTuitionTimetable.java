@@ -18,7 +18,7 @@ public class RegisterTuitionTimetable {
 			// Add a new tuition timetable
 			RegisterTuitionTimetable.setHeader("REGISTER FOR TUITION TIMETABLE");			
 			RegisterTuition tt = inputTuition();
-			RegisterTuitionTimetable.addTuition(tuitionList, tt);
+			RegisterTuitionTimetable.addTuitionTimetable(tuitionList, tt);
 			System.out.println("Tuition timetable added");
 		
 		} else if (option == 2) {
@@ -26,8 +26,7 @@ public class RegisterTuitionTimetable {
 			RegisterTuitionTimetable.viewAllTuition(tuitionList);
 
 		} else if (option == 3) {
-			//RegisterTuitionTimetable.deleteTuition(tuitionList, dt);
-			
+			RegisterTuitionTimetable.deleteTuition(tuitionList);
 
 		} else if (option == 4) {
 			System.out.println("Bye!");
@@ -43,15 +42,15 @@ public class RegisterTuitionTimetable {
 		String registerNum = Helper.readString("Enter register number > ");
 		String tuitionTimetableId = Helper.readString("Enter tuition timetable Id > ");
 		String email = Helper.readString("Enter email > ");
-		String dateTime = Helper.readString("Enter Date & Time (DD/MM/YY) 00:00 > ");
-		String registerId = Helper.readString("Enter register Id > ");
+		String dateTime = Helper.readString("Enter Date (DD/MM/YY) > ");
+	//	String registerId = Helper.readString("Enter register Id > ");
 
 		RegisterTuition tt = new RegisterTuition(registerNum, tuitionTimetableId, email,dateTime);
 		return tt;
 
 	}
 
-	private static void addTuition(ArrayList<RegisterTuition> tuitionList, RegisterTuition tt) {
+	static void addTuitionTimetable(ArrayList<RegisterTuition> tuitionList, RegisterTuition tt) {
 		
 		tuitionList.add(tt);
 	}
@@ -64,14 +63,14 @@ public class RegisterTuitionTimetable {
 		System.out.println("2. View all registrations ");
 		System.out.println("3. Delete registrations");
 		System.out.println("4. Quit");
-		Helper.line(80, "-");
+		Helper.line(90, "-");
 
 	}
 
 	public static void setHeader(String header) {
-		Helper.line(80, "-");
+		Helper.line(90, "-");
 		System.out.println(header);
-		Helper.line(80, "-");
+		Helper.line(90, "-");
 	}
 
 	public static String showAvailability(boolean isAvailable) {
@@ -92,7 +91,7 @@ public static String retrieveAllTuition(ArrayList<RegisterTuition> tuitionList) 
 	// write your code here
 	for (int i = 0; i < tuitionList.size(); i++) {
 
-		output += String.format("%-15s %-15s %-10s %-10s %-10s %-20s\n",
+		output += String.format("%-16s %-15s %-20s %-10s %-10s %-10s\n",
 				tuitionList.get(i).getRegisterNum(),
 				tuitionList.get(i).getTuitionTimetableId(), 
 				tuitionList.get(i).getEmail(),
@@ -104,10 +103,9 @@ public static String retrieveAllTuition(ArrayList<RegisterTuition> tuitionList) 
 }
 public static void viewAllTuition(ArrayList<RegisterTuition> tuitionList) {
 	RegisterTuitionTimetable.setHeader("REGISTRATION LIST");
-	//String output = retrieveAllChromebook(chromebookList);
-	String output = String.format("%-15s %-15s %-10s %-10s %-10s %-20s\n",
+	String output = String.format("%-16s %-15s %-20s %-10s %-10s %-10s\n",
 			"Register Number", "TimetableID",
-			"Email", "Status", "Date Time", "Register ID");
+			"Email", "Status", "Date", "RegisterID");
 	 output += retrieveAllTuition(tuitionList);	
 	System.out.println(output);
 	
@@ -117,20 +115,21 @@ public static void viewAllTuition(ArrayList<RegisterTuition> tuitionList) {
 
 
 //================================= Option 3 DELETE ITEM) =================================
-public static boolean deleteTuition(ArrayList<RegisterTuition> tuitionList, String string) {
-	boolean deleteReg = false;
+public static void deleteTuition(ArrayList<RegisterTuition> tuitionList) {
+	RegisterTuitionTimetable.viewAllTuition(tuitionList);
 	String  dRegisterations = Helper.readString("Enter Register number to delete > ");
-
 	for (int i = 0; i < tuitionList.size(); i++) {
-		if (dRegisterations == tuitionList.get(i).getRegisterNum()) {
-			tuitionList.remove(i);
-			deleteReg = true;
-		} else {
-			System.out.println("No record found");
+		String getRegisterNum = tuitionList.get(i).getRegisterNum();
+		
+			
+			if (getRegisterNum.equalsIgnoreCase(dRegisterations)) {
+				tuitionList.remove(i);
+				System.out.println("Registrations deleted.");
+			} else {
+				continue;
+			}
 		}
 	}
-	return deleteReg;
-}
 }
 
 
