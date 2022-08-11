@@ -24,9 +24,6 @@ public class addTuitionMainTest {
 	
 	tuitionList = new ArrayList<tuitionDetails>();
 	}
-//	@After
-//	public void tearDown() throws Exception {
-//	}
 
 	@Test
 	public void testAddTuition() {
