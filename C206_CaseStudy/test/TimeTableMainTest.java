@@ -70,9 +70,6 @@ public class TimeTableMainTest {
     }  
 	
 	
-	
-	
-	
 	@After
 	public void tearDown() throws Exception {
 		tt1 = null;
