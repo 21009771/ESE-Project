@@ -39,28 +39,14 @@ public class C206_CaseStudyTest {
 		String testOutput = "";
 		assertEquals("Check that ViewAllTuitionlist", testOutput, allTuition);
 		
-		//Given an empty list, after adding 2 items, test if the size of the list is 2 - normal
-		RegisterTuitionTimetable.addTuitionTimetable(tuitionList, tt1);
-		assertEquals("Test that TuitionTimetable arraylist size is 2", 2, tuitionList.size());
-		
-		//test if the expected output string same as the list of Tuition retrieved from the 	
-		allTuition= RegisterTuitionTimetable.retrieveAllTuition(tuitionList);
-		testOutput = String.format("%-16s %-15s %-20s %-10s %-10s %-10s\n","", "", "", "", "", "");
-		
-	
-		assertEquals("Test that ViewAllTuitionlist", testOutput, tuitionList);
-		
 	}
 	
 	//Ardilla
 	@Test
 	public void testDeleteTuition() {
 		//boundary
-				assertNotNull("Test if there is valid Tuition arraylist to add to", tuitionList);
-				//RegisterTuitionTimetable.deleteTuition(tuitionList, tt1);
-				//normal
-				//assertTrue("Test if an available item is ok to loan?");		
-				//error condition
+		assertNotNull("Test if there is valid Tuition arraylist to add to", tuitionList);
+				
 	}
 	
 	
