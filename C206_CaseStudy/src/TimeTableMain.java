@@ -117,6 +117,7 @@ public class TimeTableMain {
 		for(int i = 0; i < timetable.size(); i++ ) {
 			if(ID == timetable.get(i).getTimeTableID()) {
 				timetable.remove(i);
+				System.out.println("Tuition timetable deleted");
 				isDeleted = true;
 			}
 			
