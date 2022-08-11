@@ -26,7 +26,7 @@ public class TimeTableMain {
 			} else if (option == 2) {
 				// Add a new timetable
 				TimeTableMain.setHeader("ADD");			
-				TimeTableMain.setHeader("TIMETABLE");
+				TimeTableMain.setHeader("Timetable");
 				
 				
 				TimeTable tt = inputTimeTable();
