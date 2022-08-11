@@ -37,7 +37,6 @@ public class TimeTableMain {
 			} else if (option == 3) {
 				TimeTableMain.setHeader("Delete");			
 				TimeTableMain.setHeader("TimeTable");
-				
 
 				TimeTableMain.deleteTimeTable(timetable);
 
