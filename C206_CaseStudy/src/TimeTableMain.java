@@ -26,7 +26,7 @@ public class TimeTableMain {
 			} else if (option == 2) {
 				// Add a new timetable
 				TimeTableMain.setHeader("ADD");			
-				TimeTableMain.setHeader("TUITION");
+				TimeTableMain.setHeader("TIMETABLE");
 				
 				
 				TimeTable tt = inputTimeTable();
@@ -125,7 +125,5 @@ public class TimeTableMain {
 			
 	   }
 	}
-	
-
 
 }
